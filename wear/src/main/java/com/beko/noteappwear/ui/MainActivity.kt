@@ -2,6 +2,7 @@ package com.beko.noteappwear.ui
 
 import android.app.Activity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.wear.ambient.AmbientModeSupport
 import androidx.wear.widget.WearableLinearLayoutManager
 import com.beko.noteappwear.databinding.ActivityMain2Binding
@@ -10,7 +11,6 @@ import com.beko.noteappwear.ui.models.Note
 
 
 class MainActivity : Activity(){
-    private lateinit var ambientController: AmbientModeSupport.AmbientController
     private lateinit var binding :  ActivityMain2Binding
     private lateinit var notelist : MutableList<Note>
     private lateinit var adapter: NotesAdapter
@@ -27,13 +27,8 @@ class MainActivity : Activity(){
         notelist.add(Note(6,"Şifrelerim","Notum bu"))
 
         adapter = NotesAdapter(notelist,this)
-
-        binding.recyclerView.isEdgeItemsCenteringEnabled = true
-        binding.recyclerView.layoutManager = WearableLinearLayoutManager(this)
-        binding.recyclerView.isCircularScrollingGestureEnabled = true;
-        binding.recyclerView.isEdgeItemsCenteringEnabled = true
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
-
     }
 
 }
