@@ -28,6 +28,7 @@
                 android:textColor="@color/green"
                 />
             <ImageView
+                android:id="@+id/arrow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

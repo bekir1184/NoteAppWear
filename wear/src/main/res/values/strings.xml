@@ -8,4 +8,11 @@
     <string name="logo">Logo</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="notes">Notlar</string>
+    <string name="title_activity_content">content</string>
+    <string name="title">Başlık</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo bibendum lacus, eu volutpat magna luctus in. Morbi sollicitudin, leo ac tempor ornare, lacus est eleifend erat, eu convallis tellus neque at odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu nunc nec mi ornare accumsan. Donec in.</string>
+    <string name="title_activity_add_note">AddNote</string>
+    <string name="add_note">Not ekle</string>
+    <string name="devam">Devam</string>
+    <string name="title_activity_add_note_content">AddNoteContent</string>
 </resources>
