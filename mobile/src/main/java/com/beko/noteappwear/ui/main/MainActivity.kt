@@ -1,12 +1,12 @@
-package com.beko.noteappwear.ui
+package com.beko.noteappwear.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.beko.noteappwear.R
+import com.beko.noteappwear.data.Note
 import com.beko.noteappwear.databinding.ActivityMainBinding
 import com.beko.noteappwear.ui.adapter.NotesAdapter
-import com.beko.noteappwear.ui.models.Note
+import com.beko.noteappwear.ui.main.dialog.AddNoteDialog
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -18,6 +18,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setRecycler()
+        setClicks()
+    }
+
+    private fun setClicks() {
+        binding.fab.setOnClickListener {
+            val addNote = AddNoteDialog()
+            addNote.show(supportFragmentManager,"TAG")
+        }
+    }
+
+    private fun setRecycler() {
         notelist = ArrayList()
         notelist.add(Note(1,"Test başlığı","Notum bu"))
         notelist.add(Note(2,"Buraya başlık","Notum bu"))
@@ -29,6 +41,5 @@ class MainActivity : AppCompatActivity() {
         adapter = NotesAdapter(notelist)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
-
     }
 }

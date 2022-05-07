@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.dialog.AddNoteDialog">
+
+    <LinearLayout
+        android:background="@color/darkblue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_note"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:layout_margin="20dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeColor="@color/green"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:hint="Not başlığını giriniz"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noteTitle"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeColor="@color/green"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_margin="20dp"
+            android:hint="Not içeriğini girniz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noteContent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:paddingVertical="15dp"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_note"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:id="@+id/addBtn"/>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
